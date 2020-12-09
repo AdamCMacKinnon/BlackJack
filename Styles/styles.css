@@ -1,0 +1,37 @@
+body {
+    margin: 0px;
+}
+
+.table {
+    background-color: lime;
+    height: 500px;
+    width: 75vw;
+    border: 6px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+.player {
+    margin: 20px;
+}
+
+
+.player-name {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+       
+}
+
+.hand {
+    height: 150px;
+    background-color: darkGreen;
+}
+
+.buttons {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+
