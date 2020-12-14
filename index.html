@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blackjack</title>
-  <script src="scripts/main.js"></script>
+  <link rel="stylesheet" href="/styles/styles.css">
+  
 </head>
 <body>
-  <div class="message-box" id="messages"></div>
+  
   <div class="table">
-    <div class="player">
+    <div class="dealer">
       <label class="player-name">Dealer: 
         <span id="dealer-points" class="points"></span>
       </label>
       <div id="dealer-hand" class="hand">
+
         <!-- Dealer Hand -->
       </div>
     </div>
@@ -22,6 +24,7 @@
         <span id="player-points" class="points"></span>
       </label>
       <div id="player-hand" class="hand">
+
         <!-- Player Hand -->
       </div>
     </div>
@@ -29,7 +32,11 @@
       <button id="deal-button" type="button">Deal</button>
       <button id="hit-button" type="button">Hit</button>
       <button id="stand-button" type="button">Stand</button>
+      <button id="restart-button" type="button">Restart</button>
     </div>
+    <div class="message-box" id="messages">Welcome to BlackJack!  Good Luck!</div>
   </div>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>

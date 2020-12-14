@@ -47,8 +47,24 @@ function shuffle(deck) {
 
 deck = shuffle(deck)
 console.log(deck);
-dealerHand = [];
-playerHand = [];
+var dealerHand = [];
+var playerHand = [];
+
+let playerValue = (playerHand) =>{
+    let playerValue = 0;
+    playerValue = playerHand.reduce((acc, val) => {
+        return acc + val}, 0)
+    return playerValue
+    }
+let dealerValue = (dealerHand) =>{
+    let dealerValue = 0;
+    dealerValue = dealerHand.reduce((acc, val) => {
+        return acc + val}, 0)
+    return dealerValue
+    }
+
+console.log(playerValue);
+console.log(dealerValue);
 
 var deal = document.getElementById('deal-button');
 deal.addEventListener('click', (e) => {
@@ -61,6 +77,21 @@ deal.addEventListener('click', (e) => {
 
     }
     
+    document.querySelector(div);
+    var dealerScore = document.getElementById('messages');
+    dealerScore.textContent = `Dealer Score: ${dealerValue()}`
+    dealerScore.setAttribute('class', 'message-box')
+    div.appendChild(dealerScore);
+
+    document.querySelector(div);
+    var playerScore = document.getElementById('messages');
+    playerScore.textContent = `Dealer Score: ${playerValue()}`
+    playerSCore.setAttribute('class', 'message-box')
+    div.appendChild(dealerScore);
+
+    
+    
+
 
     for(i = 0; i < playerHand.length; i++) {
         let hand = document.querySelector("#player-hand");
@@ -77,6 +108,37 @@ deal.addEventListener('click', (e) => {
         hand.appendChild(card);
     }
 })
+var hit = document.getElementById('hit-button');
+hit.addEventListener('click', (e) => {
+    for(x = 0; x < 1; x++){
+        let card = deck.pop()
+        playerHand.push(card);
+        
+
+    }
+    for(i = 0; i < playerHand + 1; i++) {
+        let hand = document.querySelector("#player-hand");
+        let card = document.createElement('img')
+        card.src = playerHand[i].imageUrl;
+        card.setAttribute('class','hand-image')
+        hand.appendChild(card);
+    }
+
+})
+
+
+function busts(playerValue, dealerValue) {
+    if (playerValue > 21){
+        console.log('Player Busts! You Lost!');
+    } else{
+        console.log(playerValue);
+    }
+    if (dealerValue > 21) {
+        console.log('Dealer Busts!  You Win!');
+    } else {
+        console.log(dealerValue);
+    }
+}
 
 
 

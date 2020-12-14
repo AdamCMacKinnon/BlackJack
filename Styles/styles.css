@@ -16,6 +16,10 @@ body {
     margin: 20px;
 }
 
+.dealer {
+    margin: 20px;
+}
+
 
 .player-name {
     display: block;
@@ -30,8 +34,22 @@ body {
 }
 
 .buttons {
-    margin-top: 10px;
-    font-size: 15px;
+    display: flex;
+    justify-content: center;
 }
 
+.hand-image {
+    height: 95%;
+    width: auto;
+    padding: 5px;
+}
 
+.message-box {
+    display: flex;
+    margin-top: 30px;
+    background-color: rgb(139, 1, 1);
+    height: 50px;
+    width: 75vw;
+    color: white;
+    justify-content: center;
+}
